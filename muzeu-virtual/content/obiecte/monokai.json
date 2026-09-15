@@ -1,5 +1,6 @@
 {
   "id": "MONOKAI22",
+  "dosarId": "DOS-00017",
   "cadruId": "5",
   "titlu": "monkai33",
   "sala": "sala-documentelor",
@@ -14,5 +15,6 @@
   "img_2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSknF0fwzJiLHsrj-y-_ETxW2weZNcgc6FgnR5n8t9DzQ&s=10",
   "img_3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDLtuubNAI8Ueuny8i2xu0wlY9-u08RX84_kWm4r7t9g&s=10",
   "img_4": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDLtuubNAI8Ueuny8i2xu0wlY9-u08RX84_kWm4r7t9g&s=10",
-  "sat": "singera"
+  "sat": "singera",
+  "raion": "chisinau"
 }

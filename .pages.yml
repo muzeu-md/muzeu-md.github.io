@@ -13,7 +13,7 @@ content:
     path: muzeu-virtual/content/obiecte
     format: json
     exclude: [index.json]
-    filename: "{fields.dosarId}.json"
+    filename: "{fields.id}.json"
     view:
       primary: titlu
       sort: [titlu]
@@ -24,11 +24,9 @@ content:
         type: string
         required: true
       - name: dosarId
-        label: "Număr dosar (DOS-xxxxx)"
+        label: "Număr dosar"
         type: string
-        required: true
-        pattern: "^DOS-[0-9]{5}$"
-        description: "Unic și crescător (ex: DOS-00016). Verifică ultimul număr din listă și adaugă +1. Devine și linkul dosarului."
+        hidden: true
       - name: cadruId
         label: "Cadru (ID + indiciu)"
         type: select

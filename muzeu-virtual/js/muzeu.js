@@ -213,14 +213,14 @@ function numeSat(rid, sid){
   return s ? s.nume : null;
 }
 function countSat(rid, sid){
-  return MUZEU.obiecte.filter(o => (o.raion || 'chisinau') === rid && (!o.sat || o.sat === sid)).length;
+  return MUZEU.obiecte.filter(o => (o.raion || 'chisinau') === rid && (o.sat || rid) === sid).length;
 }
 
 function listaSala(id){
   return MUZEU.obiecte.filter(o =>
     o.sala === id &&
     (o.raion || 'chisinau') === raionCurent &&
-    (!satCurent || !o.sat || o.sat === satCurent));
+    (!satCurent || (o.sat || raionCurent) === satCurent));
 }
 
 /* ---- router URL nou: ?home | ?raion[/sat] | ?DOS-00001 | ?…&dosar=DOS-00001 ----

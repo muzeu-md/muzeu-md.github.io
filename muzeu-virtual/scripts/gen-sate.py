@@ -14,9 +14,21 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 RAIOANE_JS = ROOT / "js" / "raioane.js"
-PAGES_YML = ROOT / ".pages.yml"
 START = "# SATE-GENERAT-START"
 END = "# SATE-GENERAT-END"
+
+
+def gaseste_pages_yml() -> Path:
+    """Găsește .pages.yml: la rădăcina repo-ului (lângă muzeu-virtual/),
+    cu rezervă în muzeu-virtual/ (layout local de dezvoltare)."""
+    candidati = [ROOT.parent / ".pages.yml", ROOT / ".pages.yml"]
+    for c in candidati:
+        if c.is_file():
+            return c
+    raise FileNotFoundError(
+        "Nu găsesc .pages.yml nici la rădăcina repo-ului, nici în muzeu-virtual/. "
+        f"Căutat în: {', '.join(str(c) for c in candidati)}"
+    )
 
 
 def yaml_str(s: str) -> str:
@@ -37,15 +49,16 @@ def main() -> None:
             )
     bloc = "\n".join(linii)
 
-    yml = PAGES_YML.read_text(encoding="utf-8")
+    yml_path = gaseste_pages_yml()
+    yml = yml_path.read_text(encoding="utf-8")
     i, j = yml.index(START), yml.index(END)
     # păstrează linia START, înlocuiește totul până la linia END
     cap = yml[: i + len(START)] + "\n"
     coada = yml[j:]
     nou = cap + bloc + "\n" + " " * 12 + coada
     if nou != yml:
-        PAGES_YML.write_text(nou, encoding="utf-8")
-        print(f"OK: {len(linii)} sate generate în .pages.yml")
+        yml_path.write_text(nou, encoding="utf-8")
+        print(f"OK: {len(linii)} sate generate în {yml_path}")
     else:
         print("nimic de actualizat — lista satelor e la zi")
 

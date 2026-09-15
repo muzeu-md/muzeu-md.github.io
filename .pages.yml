@@ -13,16 +13,45 @@ content:
     path: muzeu-virtual/content/obiecte
     format: json
     exclude: [index.json]
-    filename: "{fields.id}.json"
+    filename: "{fields.dosarId}.json"
     view:
       primary: titlu
       sort: [titlu]
-      fields: [titlu, sala, perioada, raion]
+      fields: [dosarId, titlu, sala, perioada, raion]
     fields:
       - name: id
         label: "ID (slug, ex: clopotel-arama)"
         type: string
         required: true
+      - name: dosarId
+        label: "Număr dosar (DOS-xxxxx)"
+        type: string
+        required: true
+        pattern: "^DOS-[0-9]{5}$"
+        description: "Unic și crescător (ex: DOS-00016). Verifică ultimul număr din listă și adaugă +1. Devine și linkul dosarului."
+      - name: cadruId
+        label: "Cadru (ID + indiciu)"
+        type: select
+        required: true
+        description: "Stilul vizual al ramei dosarului. Alege un ID cât mai puțin folosit."
+        options:
+          values:
+            - name: 1
+              label: "1 - cadru auriu clasic (potrivit actelor și diplomelor)"
+            - name: 2
+              label: "2 - cadru auriu cu ornamente (piese festive, costume)"
+            - name: 3
+              label: "3 - cadru lemn închis (fotografii, mobilier, unelte)"
+            - name: 4
+              label: "4 - cadru negru modern (aparate, tehnică)"
+            - name: 5
+              label: "5 - cadru vișiniu (mărturii, scrisori, medalii)"
+            - name: 6
+              label: "6 - cadru bronz (ceramică, metal, gospodărie)"
+            - name: 7
+              label: "7 - cadru argintiu (natură, minerale, instrumente)"
+            - name: 8
+              label: "8 - cadru auriu deschis (țesături, broderii)"
       - name: titlu
         label: Titlu
         type: string
@@ -88,15 +117,92 @@ content:
       - name: img_4
         label: Imagine 5 (URL sau cale)
         type: string
-      - name: vedeta
-        label: Obiect vedetă
-        type: boolean
       - name: raion
-        label: "Raion (id, ex: chisinau)"
-        type: string
+        label: "Raion"
+        type: select
+        required: true
+        options:
+          values:
+            - name: anenii-noi
+              label: Anenii Noi
+            - name: balti
+              label: Bălți
+            - name: basarabeasca
+              label: Basarabeasca
+            - name: bender
+              label: Bender
+            - name: briceni
+              label: Briceni
+            - name: cahul
+              label: Cahul
+            - name: calarasi
+              label: Călărași
+            - name: cantemir
+              label: Cantemir
+            - name: causeni
+              label: Căușeni
+            - name: chisinau
+              label: Chișinău
+            - name: cimislia
+              label: Cimișlia
+            - name: criuleni
+              label: Criuleni
+            - name: donduseni
+              label: Dondușeni
+            - name: drochia
+              label: Drochia
+            - name: dubasari
+              label: Dubăsari
+            - name: edinet
+              label: Edineț
+            - name: falesti
+              label: Fălești
+            - name: floresti
+              label: Florești
+            - name: gagauzia
+              label: Găgăuzia
+            - name: glodeni
+              label: Glodeni
+            - name: hincesti
+              label: Hîncești
+            - name: ialoveni
+              label: Ialoveni
+            - name: leova
+              label: Leova
+            - name: nisporeni
+              label: Nisporeni
+            - name: ocnita
+              label: Ocnița
+            - name: orhei
+              label: Orhei
+            - name: rezina
+              label: Rezina
+            - name: riscani
+              label: Rîșcani
+            - name: singerei
+              label: Sîngerei
+            - name: soldanesti
+              label: Șoldănești
+            - name: soroca
+              label: Soroca
+            - name: stefan-voda
+              label: Ștefan Vodă
+            - name: straseni
+              label: Strășeni
+            - name: taraclia
+              label: Taraclia
+            - name: telenesti
+              label: Telenești
+            - name: transnistria
+              label: Transnistria
+            - name: ungheni
+              label: Ungheni
       - name: sat
-        label: "Sat (id: chisinau, singera, bacioi, codru, cricova…; gol = Chișinău)"
+        label: "Sat (id)"
         type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+        description: "ID-ul satului DIN raionul ales (ex: singera, bacioi, codru). Lista completă a satelor fiecărui raion o vezi în panelul Sate de pe site."
 
 settings:
   content:

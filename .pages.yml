@@ -1,14 +1,16 @@
 # Pages CMS — singura sursă de configurare. Se pune la rădăcina repo-ului.
 # Documentație: https://pagescms.org/docs/configuration
+# NOTĂ: fișierele proiectului stau în subfolderul muzeu-virtual/ (nu la rădăcina
+# repo-ului), de aceea toate căile de mai jos sunt prefixate cu muzeu-virtual/.
 media:
-  input: public/images
-  output: /images
+  input: muzeu-virtual/public/images
+  output: /muzeu-virtual/images
 
 content:
   - name: obiecte
     label: Obiecte muzeu
     type: collection
-    path: content/obiecte
+    path: muzeu-virtual/content/obiecte
     format: json
     exclude: [index.json]
     filename: "{fields.id}.json"

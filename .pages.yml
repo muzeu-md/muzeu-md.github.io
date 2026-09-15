@@ -93,11 +93,8 @@ content:
       - name: locatie_fizica
         label: Locația fizică
         type: string
-      - name: descriere_scurta
-        label: Descriere scurtă
-        type: text
-      - name: poveste
-        label: Poveste
+      - name: descriere
+        label: Descriere
         type: text
         required: true
       - name: imagine_principala

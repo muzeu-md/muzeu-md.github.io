@@ -9,7 +9,7 @@ content:
   - name: obiecte
     label: Obiecte muzeu
     type: collection
-    path: content/obiecte
+    path: data/obiecte
     format: json
     filename: "{primary}.json"
     view:

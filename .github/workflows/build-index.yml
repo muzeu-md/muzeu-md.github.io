@@ -1,6 +1,7 @@
 name: build-index
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - "muzeu-virtual/content/obiecte/**"

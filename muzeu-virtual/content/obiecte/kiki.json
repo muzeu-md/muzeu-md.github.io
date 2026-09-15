@@ -1,0 +1,20 @@
+{
+  "id": "kiki",
+  "titlu": "kiki",
+  "sala": "sala-documentelor",
+  "perioada": "kiki",
+  "an": "1001",
+  "material": "kiki",
+  "dimensiuni": "20x20",
+  "autor": "eu",
+  "locatie_fizica": "eu",
+  "descriere_scurta": "kikikiki",
+  "poveste": "kikikiki",
+  "img_1": "https://t3.ftcdn.net/jpg/01/79/63/54/360_F_179635420_wGa8dvkncz341Hc3fUMah6UVs5gCrlGe.jpg",
+  "img_2": "https://t3.ftcdn.net/jpg/01/79/63/54/360_F_179635420_wGa8dvkncz341Hc3fUMah6UVs5gCrlGe.jpg",
+  "img_3": "https://t3.ftcdn.net/jpg/01/79/63/54/360_F_179635420_wGa8dvkncz341Hc3fUMah6UVs5gCrlGe.jpg",
+  "img_4": "https://t3.ftcdn.net/jpg/01/79/63/54/360_F_179635420_wGa8dvkncz341Hc3fUMah6UVs5gCrlGe.jpg",
+  "vedeta": false,
+  "raion": "chisinau",
+  "sat": "bacioi"
+}

@@ -95,7 +95,7 @@ content:
         label: "Raion (id, ex: chisinau)"
         type: string
       - name: sat
-        label: Sat (id sau gol)
+        label: "Sat (id: chisinau, singera, bacioi, codru, cricova…; gol = Chișinău)"
         type: string
 
 settings:

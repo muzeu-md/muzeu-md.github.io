@@ -10,14 +10,14 @@ content:
     type: collection
     path: content/obiecte
     exclude: [index.json]
-    filename: "{primary}.json"
+    filename: "{fields.id}.json"
     view:
       primary: titlu
-      sort: titlu
+      sort: [titlu]
       fields: [titlu, sala, perioada, raion]
     fields:
       - name: id
-        label: ID (slug, ex: clopotel-arama)
+        label: "ID (slug, ex: clopotel-arama)"
         type: string
         required: true
       - name: titlu
@@ -29,12 +29,19 @@ content:
         type: select
         required: true
         options:
-          - sala-documentelor
-          - sala-scolii
-          - sala-naturii
-          - sala-mestesugurilor
-          - sala-gospodariei
-          - sala-marturiilor
+          values:
+            - name: sala-documentelor
+              label: Sala Documentelor
+            - name: sala-scolii
+              label: Sala Școlii
+            - name: sala-naturii
+              label: Sala Naturii
+            - name: sala-mestesugurilor
+              label: Sala Meșteșugurilor
+            - name: sala-gospodariei
+              label: Sala Gospodăriei
+            - name: sala-marturiilor
+              label: Sala Mărturiilor
       - name: perioada
         label: Perioada
         type: string
@@ -82,7 +89,7 @@ content:
         label: Obiect vedetă
         type: boolean
       - name: raion
-        label: Raion (id, ex: chisinau)
+        label: "Raion (id, ex: chisinau)"
         type: string
       - name: sat
         label: Sat (id sau gol)

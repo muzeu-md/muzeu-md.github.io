@@ -1,0 +1,20 @@
+{
+  "id": "hello",
+  "titlu": "hello",
+  "sala": "sala-documentelor",
+  "perioada": "interbelică",
+  "an": "2000",
+  "material": "piele",
+  "dimensiuni": "50x50x50",
+  "autor": "eu",
+  "locatie_fizica": "undeva",
+  "descriere_scurta": "HELLOOOOOO WORLDDD",
+  "poveste": "HIHIHI",
+  "img_1": "https://www.milesweb.com/blog/wp-content/uploads/2025/11/what-is-a-url.png",
+  "img_2": "https://www.milesweb.com/blog/wp-content/uploads/2025/11/what-is-a-url.png",
+  "img_3": "https://www.milesweb.com/blog/wp-content/uploads/2025/11/what-is-a-url.png",
+  "img_4": "https://www.milesweb.com/blog/wp-content/uploads/2025/11/what-is-a-url.png",
+  "vedeta": false,
+  "raion": "chisinau",
+  "sat": "singera"
+}

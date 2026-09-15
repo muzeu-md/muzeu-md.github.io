@@ -8,7 +8,6 @@
     "costum-oltenesc.json",
     "geoda-ametist.json",
     "harta-1938.json",
-    "himera.json",
     "ierbar-1965.json",
     "microscop-1982.json",
     "minge-1985.json",
@@ -18,6 +17,6 @@
     "razboi-tesut.json",
     "scrisoare-1944.json"
   ],
-  "count": 17,
-  "updatedAt": "2026-09-15T21:47:47.330877+00:00"
+  "count": 16,
+  "updatedAt": "2026-09-15T21:50:35.625297+00:00"
 }

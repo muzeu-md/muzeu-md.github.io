@@ -6,6 +6,7 @@
     "catalog-1974.json",
     "clopotel-arama.json",
     "costum-oltenesc.json",
+    "dos-00016.json",
     "geoda-ametist.json",
     "harta-1938.json",
     "ierbar-1965.json",
@@ -16,6 +17,6 @@
     "razboi-tesut.json",
     "scrisoare-1944.json"
   ],
-  "count": 15,
-  "updatedAt": "2026-09-15T18:10:21.972401+00:00"
+  "count": 16,
+  "updatedAt": "2026-09-15T19:55:15.813117+00:00"
 }

@@ -334,7 +334,7 @@ body.vizor-deschis .vizor{opacity:1}
 .mini.on .mini-fundal{filter:blur(8px) brightness(.8) saturate(1.25) sepia(.1)}
 .f-poveste{font-family:var(--font-corp);font-size:20px;font-style:italic;line-height:1.5;border-left:4px solid var(--aur);background:rgba(253,246,227,.8);padding:12px 14px 30px;border-radius:0 2px 2px 0;margin:14px 0;color:#2b2116;position:relative}
 #f-poveste-text::before{content:'Descriere — ';font-style:normal;font-family:var(--font-titlu);font-size:12px;letter-spacing:.18em;color:#7a5c14}
-#f-poveste-text{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+#f-poveste-text{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere;white-space:pre-line}
 .f-mai-mult{position:absolute;right:14px;bottom:8px;margin:0;background:linear-gradient(90deg,rgba(253,246,227,0),rgba(253,246,227,.94) 30%);border:none;padding:2px 0 2px 28px;cursor:pointer;white-space:nowrap;
   font-family:var(--font-titlu);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7a5c14;
   text-decoration:underline;text-decoration-color:#8a6d1f;text-underline-offset:4px}
